@@ -46,7 +46,7 @@
       </HBox>
       <VBox layoutY="35.0" prefHeight="86.0" prefWidth="278.0" style="-fx-background-color: black;">
          <children>
-            <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" prefHeight="86.0" prefWidth="285.0" promptText="0" style="-fx-background-color: black; -fx-background-radius: 200; -fx-border-color: darkorange;">
+            <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" prefHeight="86.0" prefWidth="285.0" style="-fx-background-color: black; -fx-background-radius: 200; -fx-border-color: darkorange;">
                <font>
                   <Font name="System Bold" size="35.0" />
                </font>
