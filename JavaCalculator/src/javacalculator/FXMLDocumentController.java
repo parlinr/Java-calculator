@@ -79,64 +79,96 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     void handleButtonAction(ActionEvent event) {
         if (event.getSource()== one)
-        { display.setText(display.getText() + "1");//set text to 1 when one button pressed
-        }else if (event.getSource()== two)
-        {display.setText(display.getText() + "2");//set text to 2 when two button pressed
-        }else if (event.getSource()== three)
-        {display.setText(display.getText() + "3");//set text to 3 when three button pressed
-        }else if (event.getSource()== four)
-        {display.setText(display.getText() + "4");//set text to 4 when four button pressed
-        }else if (event.getSource()== five)
-        {display.setText(display.getText() + "5");//set text to 5 when five button pressed
-        }else if (event.getSource()== six)
-        {display.setText(display.getText() + "6");//set text to 6 when six button pressed
-        }else if (event.getSource()== seven)
-        {display.setText(display.getText() + "7");//set text to 7 when seven button pressed
-        }else if (event.getSource()== eight)
-        {display.setText(display.getText() + "8");//set text to 8 when eight button pressed
-        }else if (event.getSource()== nine)
-        {display.setText(display.getText() + "9");//set text to 9 when nine button pressed
-        }else if (event.getSource()== zero)
-        {display.setText(display.getText() + "0");//set text to 0 when zero button pressed
-        }else if (event.getSource()== decimal)
-        {display.setText(display.getText() + ".");//set text to . when decimal button pressed
-        }else if (event.getSource()== clear)
-        {display.setText(" ");// set text to  when the clear button pressed
-        }else if (event.getSource()== add)
-        {data = Float.parseFloat(display.getText());
-        operation = 1;//Addition
-        display.setText("");
-        }else if (event.getSource()== subtract)
-        {data = Float.parseFloat(display.getText());
-        operation = 2;//Subtraction
-        display.setText("");
-        }else if (event.getSource()== multiply)
-        {data = Float.parseFloat(display.getText());
-        operation = 3;//Multiplication
-        display.setText("");
-        }else if (event.getSource()== divide)
-        {data = Float.parseFloat(display.getText());
-        operation = 4;//Division
-        display.setText("");
-        }else if (event.getSource() == equal)
-        {Float secondOperand = Float.parseFloat(display.getText());
-        switch(operation){//switch statement used for math
-            case 1://Addition
-                Float ans = data + secondOperand;
-                display.setText(String.valueOf(ans));break;
-            case 2://Subtraction
-                ans = data - secondOperand;
-                display.setText(String.valueOf(ans));break;
-            case 3://Multiplication
-                ans = data * secondOperand;
-                display.setText(String.valueOf(ans));break;
-            case 4://Division
-                ans = 0f;
-                try{
-                ans = data / secondOperand;
-                }catch (Exception e){display.setText("Error");}
-                display.setText(String.valueOf(ans));break;
+        {
+			//set text to 1 when one button pressed
         }
+		else if (event.getSource()== two)
+        {
+			//set text to 2 when two button pressed
+        }
+		else if (event.getSource()== three)
+        {
+			//set text to 3 when three button pressed
+        }
+		else if (event.getSource()== four)
+        {
+			//set text to 4 when four button pressed
+        }
+		else if (event.getSource()== five)
+        {
+			//set text to 5 when five button pressed
+        }
+		else if (event.getSource()== six)
+        {
+			//set text to 6 when six button pressed
+        }
+		else if (event.getSource()== seven)
+        {
+			//set text to 7 when seven button pressed
+        }
+		else if (event.getSource()== eight)
+        {
+			//set text to 8 when eight button pressed
+        }
+		else if (event.getSource()== nine)
+        {
+			//set text to 9 when nine button pressed
+        }
+		else if (event.getSource()== zero)
+        {
+			//set text to 0 when zero button pressed
+        }
+		else if (event.getSource()== decimal)
+        {
+			//set text to . when decimal button pressed
+        }
+		else if (event.getSource()== clear)
+        {
+			// set text to  when the clear button pressed
+        }
+		else if (event.getSource()== add)
+        {
+			data = Float.parseFloat(display.getText());
+			operation = 1;//Addition
+			display.setText("");
+        }
+		else if (event.getSource()== subtract)
+        {
+			data = Float.parseFloat(display.getText());
+			operation = 2;//Subtraction
+			display.setText("");
+        }
+		else if (event.getSource()== multiply)
+        {
+			data = Float.parseFloat(display.getText());
+			operation = 3;//Multiplication
+			display.setText("");
+        }
+		else if (event.getSource()== divide)
+        {
+			data = Float.parseFloat(display.getText());
+			operation = 4;//Division
+			display.setText("");
+        }
+		else if (event.getSource() == equal)
+        {
+			Float secondOperand = Float.parseFloat(display.getText());
+			switch(operation){//switch statement used for math
+				case 1://Addition
+					Float ans = data + secondOperand;
+					display.setText(String.valueOf(ans));break;
+				case 2://Subtraction
+					ans = data - secondOperand;
+					display.setText(String.valueOf(ans));break;
+				case 3://Multiplication
+					ans = data * secondOperand;
+					display.setText(String.valueOf(ans));break;
+				case 4://Division
+					ans = 0f;
+					ans = data / secondOperand;
+					display.setText(String.valueOf(ans));
+					break;
+			}
         }
     }
     
